@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../App.css';
+import "../App.css";
 
 export const NewsBlog = () => {
   const [news, setNews] = useState([]);
@@ -37,7 +37,37 @@ export const NewsBlog = () => {
       });
   }, [url]);
 
-  if (news.length === 0) return <div>Loading....</div>;
+  if (news.length === 0)
+    return (
+      <>
+        <div className="spinner-grow text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-secondary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-danger" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-warning" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-light" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="spinner-grow text-dark" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </>
+    );
+
+  // ;<div>Loading...</div>;
 
   return (
     <section className="news-section">
@@ -47,10 +77,16 @@ export const NewsBlog = () => {
         {news.map((newsCard, index) => (
           <div key={index} className="news-card">
             <div className="card" style={{ width: "18rem" }}>
-              <img className="card-img-top" src={newsCard.urlToImage} alt="Card image cap" />
+              <img
+                className="card-img-top"
+                src={newsCard.urlToImage}
+                alt="Card image cap"
+              />
               <div className="card-body">
                 <h5 className="card-title news-title">{newsCard.title}</h5>
-                <p className="card-text news-description">{newsCard.description}</p>
+                <p className="card-text news-description">
+                  {newsCard.description}
+                </p>
                 <a href="#" className="btn btn-primary">
                   View More
                 </a>
