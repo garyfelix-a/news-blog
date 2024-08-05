@@ -1,0 +1,78 @@
+section {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section h2 {
+  margin-left: 4px;
+}
+
+/* Navbar Styles */
+.nav-menu {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  align-content: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 5px 100px;
+}
+
+.right-nav {
+  /* border: 2px solid green; */
+}
+
+/* News Section */
+
+.news-section {
+  /* border: 2px solid red; */
+  padding: 20px 100px;
+}
+
+.news-blog {
+  display: flex !important;
+  /* border: 2px solid red; */
+  /* max-width: 100vw; */
+  /* height: 100vh; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  /* margin: 10px; */
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
+.news-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.news-title{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Footer Styles */
+
+.footer {
+  border: 2px solid black;
+  padding: 50px;
+  background-color: black;
+  color: white;
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+}
